@@ -42,7 +42,7 @@ class SybilNode:
         self.__true_id = self.__random_bytes(20)
 
         self.__socket = socket.socket(type=socket.SOCK_DGRAM)
-        self.__socket.bind(("0.0.0.0", 0))
+        self.__socket.bind(("0.0.0.0", 35001))
         self.__socket.setblocking(False)
 
         self.__incoming_buffer = array.array("B", (0 for _ in range(65536)))
